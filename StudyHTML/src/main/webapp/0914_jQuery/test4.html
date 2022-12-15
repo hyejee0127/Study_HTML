@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>0914_jQuery/test4.html</title>
+<script type="text/javascript" src="jquery-3.6.1.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+// 		대상.attr(속성)
+		var w =$('img').attr('width');
+// 		alert(w);
+		$('img').attr('width','500');
+		$('img').attr('height','300');
+
+		$('img').attr({
+			'src':'../0907/activity.jpg',
+			'border':'10'
+		});
+		
+	});
+</script>
+</head>
+<body>
+<img src="../0907/healing.jpg" width="300" height="200" border="5">
+</body>
+</html>
+
+
+

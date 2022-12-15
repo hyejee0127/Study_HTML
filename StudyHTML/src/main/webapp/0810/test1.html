@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>0810/test1.html</title>
+<style type="text/css">
+table {
+/* 	테이블 제목 위치 지정 */
+	caption-side: bottom;
+/* 	테이블 선 합치기 separate; collapse;*/
+	border-collapse:collapse;
+/* 	선넣기 */
+	border: 1px solid black;
+/* 	너비 */
+	width: 200px;
+}
+td, th{
+	border: 1px solid black;
+/* 	안여백 */
+	padding: 10px;
+/* 	글자정렬 */
+	text-align: center;
+}
+thead {
+	background-color: green;
+}
+tbody {
+	background-color: yellow;
+}
+tfoot {
+	background-color: pink;;
+}
+th{
+	color: blue;
+}
+</style>
+</head>
+<body>
+<h1>회원목록</h1>
+<table>
+<caption>테이블 제목</caption>
+<thead>
+<tr><th>번호</th><th>이름</th></tr>
+</thead>
+<tbody>
+<tr><td>1</td><td>홍길동</td></tr>
+<tr><td>2</td><td>이길동</td></tr>
+</tbody>
+<tfoot>
+<tr><td>3</td><td>김길동</td></tr>
+</tfoot>
+</table>
+</body>
+</html>

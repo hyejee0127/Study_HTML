@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<div align="right">
+		<h4><a href="../index.html">홈으로</a> | 로그인</h4>
+	</div>
+	<hr>
+	<h1>하이퍼링크 연습 - a 태그</h1>
+	<a href="http://www.itwillbs.co.kr">아이티윌 부산교육센터 바로가기</a><br>
+	<a href="http://www.itwillbs.co.kr" target="_blank">아이티윌 부산교육센터 바로가기(새창)</a><br>
+	<hr>
+	<!-- 
+	하이퍼링크에 특정 대상을 지정할 경우 절대 경로 및 상대 경로를 통해 지정 가능
+	1. 절대 경로 : 어느 위치에 있던지 상관없이 무조건 접근 가능한 경로
+	               주로, 인터넷 상의 URL 이 절대 경로 사용()
+	               ex) http://www.naver.com
+	               ex2) D:/Shared/JSP/workspace_jsp3/StudyHTML/src/main/webapp/0701/0701_images/dog.png
+	2. 상대 경로 : 자신의 현재 위치에 따라 상대적으로 변하는 경로
+	               1) 최상위 경로 : /
+	               2) 현재 경로(생략 가능) : ./
+	               3) 상위 경로 : ../ 
+	               4) 하위 경로 : 경로명
+	-->
+	<a href="cat.png">고양이 사진을 보려면 클릭하세요</a><br>
+	
+	<!-- "dog.png" 파일은 현재 폴더에 존재하지 않으므로 잘못된 링크 = 페이지 오류 발생 -->
+	<a href="dog.png">강아지 사진을 보려면 클릭하세요(안열림)</a><br>
+	<!-- 절대경로를 사용하여 "dog.png" 파일 지정 시 정상적으로 열림 -->
+	<a href="D:/Shared/JSP/workspace_jsp3/StudyHTML/src/main/webapp/0701/0701_images/dog.png">강아지 사진을 보려면 클릭하세요(절대경로)</a><br>
+	<!-- 상대경로를 사용하여 하위 폴더(0701_images) 내의 dog.png 파일 지정 시 정상적으로 열림  -->
+	<a href="0701_images/dog.png">강아지 사진을 보려면 클릭하세요(상대경로)</a><br>
+	
+	<!-- 상대경로를 사용하여 상위 폴더(webapp) 내의 image 폴더 내의 mov12.jpg 파일 지정 -->
+	<a href="../images/mov12.jpg">쥬라기공원 포스터를 보려면 클릭하세요</a><br>
+	
+	<!-- 
+	상대경로 중 최상위 경로를 지정할 경우 컴퓨터 D드라이브 등이 최상위 경로이므로
+	D:/images 폴더가 존재하지 않으므로 오류 발생!
+	-->
+	<a href="/images/mov12.jpg">쥬라기공원 포스터를 보려면 클릭하세요(안열림)</a><br>
+	
+	<hr>
+	<!-- 하이퍼링크 작성(표시할 텍스트 : 페이지 이동, 이동할 파일명 : test3.html) -->
+	<a href="test3.html">test3.html 페이지로 이동</a><br>
+	<a href="D:/Shared/JSP/workspace_jsp3/StudyHTML/src/main/webapp/0701/test3.html">test3.html 페이지로 이동</a>
+	
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

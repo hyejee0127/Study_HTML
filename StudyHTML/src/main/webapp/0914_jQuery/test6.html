@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>0914_jQuery/test6.html</title>
+<script type="text/javascript" src="jquery-3.6.1.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+// 		대상.bind(이벤트종류,함수), 대상.click(함수)
+		$('h1').bind('click',function(){
+// 			alert("클릭");
+//          클릭한 대상만 지정 => this
+			$(this).css('color','red');
+		});
+		
+		$('div').click(function(){
+// 			alert("클릭");
+			$(this).append('+');
+			//이벤트 한번만 적용 => 이벤트 종료
+			$(this).unbind();
+		});
+		
+// 		$('img').mouseover(function(){
+// 			$(this).attr('src','../0907/activity.jpg');
+// 		});
+		
+// 		$('img').mouseout(function(){
+// 			$(this).attr('src','../0907/healing.jpg');
+// 		});
+		
+// 		대상.함수().함수().함수()
+
+		$('img').mouseover(function(){
+			$(this).attr('src','../0907/activity.jpg');
+		}).mouseout(function(){
+			$(this).attr('src','../0907/healing.jpg');
+		});
+	});
+</script>
+</head>
+<body>
+<img src="../0907/healing.jpg">
+<h1>head-0</h1>
+<h1>head-1</h1>
+<h1>head-2</h1>
+<div>div-0</div>
+<div>div-1</div>
+<div>div-2</div>
+</body>
+</html>

@@ -1,0 +1,7 @@
+@charset "UTF-8";
+h1{
+	color: red;	
+	background-color: pink;
+	padding: 10px;
+	text-align: center;
+}

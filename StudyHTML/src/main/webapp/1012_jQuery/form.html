@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>1012_jQuery/form.html</title>
+<script type="text/javascript" src="../0914_jQuery/jquery-3.6.1.js"></script>
+<script type="text/javascript">
+ $(document).ready(function(){
+	 $('#btn').click(function(){
+// 		 alert("클릭");
+		 $.ajax({
+			 url:'idCheck.jsp',
+			 data:{'id':$('#id').val()},
+			 success:function(rdata){
+				 $('#iddiv').html(rdata);
+			 }
+		 });
+	 });
+ });
+</script>
+</head>
+<body>
+<form action="a.jsp" method="get">
+아이디 : <input type="text" name="id" id="id">
+<input type="button" value="아이디중복체크" id="btn"><br>
+<div id="iddiv"></div>
+</form>
+</body>
+</html>

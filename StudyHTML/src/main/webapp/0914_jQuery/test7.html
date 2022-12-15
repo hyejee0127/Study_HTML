@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>0914_jQuery/test7.html</title>
+<script type="text/javascript" src="jquery-3.6.1.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+// 		id="btn" 버튼 클릭 click() 발생
+		$('#btn').click(function(){
+// 			alert('클릭');
+// id="myid" value값 => val()
+			alert($('#myid').val());
+			alert($('#mypass').val());
+		});
+		
+		// 전송버튼  클릭했을때 submit() 이벤트 발생
+		$('#myform').submit(function(){
+// 			alert("전송");
+			if($('#myid').val()==""){
+// 				alert("아이디 입력");
+				$('#dd').html('아이디 입력').css('color','red');
+				$('#myid').focus();
+				//submit버튼 기능 멈춤 false 리턴
+				return false;
+			}
+			
+			if($('#mypass').val()==""){
+// 				alert("비밀번호 입력");
+				$('#dd').html('비밀번호 입력').css('color','red');
+				$('#mypass').focus();
+				//submit버튼 기능 멈춤 false 리턴
+				return false;
+			}
+			// 체크 되어있으면 true/ 안되어있으면 false
+// 			alert($('#man').is(':checked'));
+			if($('#man').is(':checked')==false && $('#woman').is(':checked')==false){
+				$('#dd').html('성별체크하세요').css('color','red');
+				//submit버튼 기능 멈춤 false 리턴
+				return false;
+			}
+		});
+	});
+</script>
+</head>
+<body>
+<form action="a.jsp" method="get" id="myform">
+아이디 : <input type="text" name="id" id="myid"><br>
+비밀번호 : <input type="password" name="pass" id="mypass"><br>
+성별 : <input type="radio" name="gender" value="남" id="man">남자
+       <input type="radio" name="gender" value="여" id="woman">여자<br>
+<div id="dd"></div>
+<input type="button" value="버튼" id="btn">
+<input type="submit" value="전송버튼" id="sbtn">
+</form>
+
+</body>
+</html>

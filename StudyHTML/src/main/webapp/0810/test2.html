@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>0810/test2.html</title>
+<style type="text/css">
+/*  문단태그 : 블록레벨 요소(전체영역) : h1, p, div */
+/*     영역태그: 인라인 레벨 요소(요소영역): span, img, strong, a */
+	*{
+/* 	테두리선 */
+		border: 1px solid black;
+/* 		너비 기준 변경 content-box;(내용만 포함)  border-box;(테두리선 포함) */
+	box-sizing: border-box;
+	}
+	h1{
+/* 	밖여백 */
+		margin: 20px;
+/* 		안여백 */
+		padding: 20px;
+/* 		내용영역 너비 높이  고정너비*/
+ 		width: 400px; height: 100px;  
+/* 웹브라우저 크기 50%  가변너비 */
+/* 		width: 50%; height: 100px; */
+	}
+	
+</style>
+</head>
+<body>
+<h1>제목</h1>
+<p>문단내용 <span>요소내용</span></p>
+<div><a>영역</a> 내용</div>
+</body>
+</html>

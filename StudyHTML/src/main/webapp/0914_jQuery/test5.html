@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>0914_jQuery/test5.html</title>
+<script type="text/javascript" src="jquery-3.6.1.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+// 		   대상.html() 내용변경
+			var d = $('div').html();
+// 			alert(d);
+// 			$('div').html('<h1>변경내용</h1>');
+			
+			$('div').html(function(index,oldhtml){
+// 				alert(index);
+// 				alert(oldhtml);
+				return oldhtml+'변경내용'+index;
+			});
+
+//         대상.append() 내용 뒤부분에 추가 
+			$('body').append('본문 뒤부분에 추가');
+			$('h1').append('제목 뒤부분에 추가');
+			$('h1').append(function(index,html){
+// 				alert(index);
+// 				alert(html);
+				return '*'+index;
+			});
+	});
+</script>
+</head>
+<body>
+<h1>head-0</h1>
+<h1>head-0</h1>
+<h1>head-0</h1>
+<div>div-0</div>
+<div>div-1</div>
+<div>div-2</div>
+</body>
+</html>

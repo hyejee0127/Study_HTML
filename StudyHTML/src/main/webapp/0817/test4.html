@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>0817/test4.html</title>
+<style type="text/css">
+/* 	웹요소 위치  left right top bottom 기준위치 왼쪽으로 얼마 떨어져 있는지 지정*/
+/* 전체 여백 없애기 */
+*{
+	margin: 0px; padding: 0px;
+}
+p{
+	width: 300px; border: 1px solid black; padding: 10px;
+}
+#pos1{
+	left: 50px; top: 50px;
+/* 	배치방법 position static;기본값(문서흐름),  relative(다른요소기준);
+                      absolute(상위요소기준); fixed;(브라우저기준)*/
+	position: absolute;
+}
+#pos2{
+	position: absolute;
+/* 	오른쪽 기준 100px, 위 기준 100px */
+	right: 100px; top: 100px;
+}
+#pos3{
+	position: absolute;
+/* 	왼쪽 기준 100px, 아래 기준 100px */	
+	left: 100px; bottom: 100px;
+}
+</style>
+</head>
+<body>
+<p id="pos1">1. 가나다라마바사아가나다라마바사아가나다라마바사아가나다라마바사아
+가나다라마바사아가나다라마바사아가나다라마바사아가나다라마바사아가나다라마바사아
+가나다라마바사아가나다라마바사아가나다라마바사아가나다라마바사아가나다라마바사아
+</p>
+<p id="pos2">2. 가나다라마바사아가나다라마바사아가나다라마바사아가나다라마바사아
+가나다라마바사아가나다라마바사아가나다라마바사아가나다라마바사아가나다라마바사아
+가나다라마바사아가나다라마바사아가나다라마바사아가나다라마바사아가나다라마바사아
+</p>
+<p id="pos3">3. 가나다라마바사아가나다라마바사아가나다라마바사아가나다라마바사아
+가나다라마바사아가나다라마바사아가나다라마바사아가나다라마바사아가나다라마바사아
+가나다라마바사아가나다라마바사아가나다라마바사아가나다라마바사아가나다라마바사아
+</p>
+</body>
+</html>

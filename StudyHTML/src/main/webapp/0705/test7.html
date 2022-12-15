@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>목록 태그</title>
+</head>
+<body>
+	<h1>목록 태그</h1>
+	<hr>
+	<h3>순서가 없는 목록</h3>
+	<!-- 순서가 없는 목록은 ul 태그 사이에 li 태그로 목록 작성 -->
+	<ul>
+		<li>JAVA</li>
+		<li>JSP</li>
+		<li>Android</li>
+	</ul>
+	<hr>
+	<h3>순서가 있는 목록</h3>
+	<!-- 순서가 있는 목록은 ol 태그 사이에 li 태그로 목록 작성 -->
+	<ol>
+		<li>JAVA</li>
+		<li>JSP</li>
+		<li>Android</li>
+	</ol>
+	<hr>
+	<h3>순서가 있는 목록2</h3>
+	<!-- 순서의 종류(1, A, a, i, I)는 type 속성을 통해 변경 가능(기본값은 숫자) -->
+	<ol type="I">
+		<li>JAVA</li>
+		<li>JSP</li>
+		<li>Android</li>
+		<li>Oracle</li>
+	</ol>
+	<hr>
+	<h3>중첩 목록</h3>
+	<!-- 중첩 목록은 ul 또는 ol 태그 내의 li 태그 내에서 다시 ul 또는 ol 태그 사용 -->
+	<ul>
+		<li>
+			<b>JAVA</b> <!-- 목록의 제목 -->
+			<!-- 중첩 목록을 만들기 위해 ol 태그를 li 태그 내부에서 사용 -->
+			<ol>
+				<li>변수</li>
+				<li>연산자</li>
+				<li>조건문</li>
+			</ol>
+		</li>
+		<!-- 두번째 목록 -->
+		<li>
+			<b>JSP</b>
+			<ol>
+				<li>HTML 기초</li>
+				<li>자바스크립트 기초</li>
+				<li>JSP 기초</li>
+			</ol>
+		</li>
+		<li>Android</li>
+	</ul>
+</body>
+</html>
+
+
+
+
+
+
+
+
+

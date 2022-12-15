@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>입력양식 태그</h1>
+	<form action="">
+		<!-- 텍스트박스의 value 속성은 실제 텍스트를 미리 입력 가능 -->
+		<input type="text" name="text" value="미리 입력한 텍스트"><br>
+		<!-- 텍스트박스의 placeholder 속성은 텍스트를 표시하지만, 실제 텍스트 입력 시 숨겨짐 -->
+		<input type="text" name="text2" placeholder="텍스트를 입력하세요"><br>
+		<!-- 패스워드 입력박스는 입력 텍스트를 표시하지 않음. placeholder 속성은 동작함 -->
+		<input type="password" name="passwd" placeholder="패스워드를 입력하세요"><br>
+		<hr>
+		<!-- 라디오버튼과 체크박스는 태그 바깥의 텍스트가 실제 표시되는 텍스트 -->
+		<!-- 라디오버튼은 주로 단일 선택용으로 사용하며, 반드시 하나의 그룹은 name 속성값이 같아야함 -->
+		<input type="radio" name="radio" value="커피">커피
+		<input type="radio" name="radio" value="소주">소주
+		<input type="radio" name="radio2" value="우유">우유 <!-- 커피, 소주와 별개로 동작 -->
+		<br>
+		<!-- 체크박스는 주로 다중 선택용으로 사용하며, name 속성값은 선택 방식에 영향 X -->
+		<input type="checkbox" name="subject" value="JAVA">자바
+		<input type="checkbox" name="subject" value="JSP">JSP
+		<input type="checkbox" name="subject" value="ANDROID">안드로이드
+		<hr>
+		<!-- 셀렉트박스는 기본적으로 목록 중에서 하나를 선택하는 기능 수행 -->
+		<select name="food">
+			<option value="김밥">김밥</option>
+			<option value="떡볶이">떡볶이</option>
+			<option value="순대">순대</option>
+		</select>
+		<!-- 단, multiple 속성 지정 시 리스트박스로 변경되어 복수개의 선택 가능 -->
+		<select name="food2" multiple="multiple">
+			<option value="김밥">김밥</option>
+			<option value="떡볶이">떡볶이</option>
+			<option value="순대">순대</option>
+		</select>
+		<select name="food3">
+			<option>메뉴를 선택하세요</option>
+			<optgroup label="분식">
+				<option value="김밥">김밥</option>
+				<option value="떡볶이">떡볶이</option>
+				<option value="순대">순대</option>
+			</optgroup>
+			<optgroup label="한식">
+				<option value="갈비탕">갈비탕</option>
+				<option value="비빔밥">비빔밥</option>
+				<option value="갈비찜">갈비찜</option>
+			</optgroup>
+		</select>
+		<hr>
+		<input type="button" value="기본버튼">
+		<input type="reset" value="초기화버튼">
+		<input type="submit" value="전송버튼">
+	</form>
+	<hr>
+	<form action="">
+		<fieldset>
+			<legend>필수 항목</legend>
+			<table>
+				<tr>
+					<td>아이디</td>
+					<td><input type="text" name="id"></td>
+				</tr>
+				<tr>
+					<td>패스워드</td>
+					<td><input type="password" name="passwd"></td>
+				</tr>
+			</table>
+		</fieldset>
+		<fieldset>
+			<legend>선택 항목</legend>
+			<table>
+				<tr>
+					<td>이름</td>
+					<td><input type="text" name="name"></td>
+				</tr>
+				<tr>
+					<td>전화번호</td>
+					<td><input type="text" name="phone"></td>
+				</tr>
+			</table>
+		</fieldset>
+	</form>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

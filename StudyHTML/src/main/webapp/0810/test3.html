@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>0810/test3.html</title>
+<style type="text/css">
+	#box1{
+/* 		border: 1px solid blue; */
+
+		border-width:10px;
+		
+/* 		전체 */
+/* 		border-style:dotted; */
+/* 		위아래, 왼오른쪽 */
+/* 		border-style:dotted solid; */
+/* 		위 오른쪽 아래 왼쪽 */
+/* 		border-style:dotted solid dashed double; */
+		border-top-style: dotted;
+		border-right-style: solid;
+		border-bottom-style: dashed;
+		border-left-style: double;
+		
+		border-color: green;
+	}
+	#box2{
+/* 		border-width:1px; */
+/* 		border-width:1px 10px; */
+/* 		border-width:1px 10px 20px 30px; */
+/* 		border-top-width:1px; */
+/* 		border-right-width:10px; */
+/* 		border-bottom-width:20px; */
+/* 		border-left-width:30px; */
+
+/* 		border-width:thin; */
+/* 		border-width:medium; */
+		border-width:thick;
+
+
+		border-style: solid;
+		border-color: black;
+	}
+	#box3{
+		border-width:1px;	
+		border-style: solid;
+/* 		border-color: red; */
+/* 		border-color: red blue; */
+		border-color: red blue green yellow;
+	}
+	#box4{
+		border: 1px solid black;
+		width: 300px; height: 200px;
+/* 		모서리 둥글게  */
+/* 		border-radius: 10px; */
+/* 		border-radius: 20%; */
+		border-top-left-radius: 20px;
+		border-bottom-right-radius: 20px;
+	}
+/* 	이미지 모서리 둥글게 */
+	img{
+		border-radius: 25px;
+		border: 2px solid red;
+		box-shadow: 5px 5px 15px 5px pink;
+	}
+	#box5{
+/* 		영역 그림자 */
+/* 		box-shadow: 수평(왼오른) 수직(위아래) 흐림 번짐 색상 */
+		box-shadow: 2px -2px 5px 0px blue;
+		width: 100px; height: 100px;
+	}
+</style>
+</head>
+<body>
+<div id="box1">실선 테두리</div>
+<div id="box2">실선 테두리</div>
+<div id="box3">실선 테두리</div>
+<div id="box4">실선 테두리</div>
+<img src="images/top.jpg">
+<div id="box5">실선 테두리</div>
+</body>
+</html>

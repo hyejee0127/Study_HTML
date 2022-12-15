@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>1012_jQuery/list.html</title>
+<script type="text/javascript" src="../0914_jQuery/jquery-3.6.1.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('#btn').click(function(){
+// 			alert('클릭');
+			$.ajax({
+				url:'listJson.jsp',
+				dataType:'json',
+				success:function(rdata){
+					// rdata : json데이터, 자바스크립트 배열
+					// 배열 반복문 접근
+					$.each(rdata,function(index,item){
+						// 테이블 태그 추가
+                        $('table').append("<tr><td>"+item.id+"</td><td>"+item.name+"</td></tr>");
+					});
+				}
+			});//
+			//한번만 수행하고 이벤트 멈춤
+			$(this).unbind();
+		});//
+	});//
+</script>
+</head>
+<body>
+<input type="button" value="회원목록조회" id="btn">
+<table border="1">
+<tr><td>아이디</td><td>이름</td></tr>
+</table>
+</body>
+</html>

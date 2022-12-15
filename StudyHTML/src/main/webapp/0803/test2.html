@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>0803/test2.html</title>
+<style type="text/css">
+/* CSS:캐스케이딩 위에서 아래, 계단식, 우선순위 
+!important, 태그에 바로적용(인라인 스타일),id, class,  
+스타일 상속 body */
+/* p태그 글자색 검정색 */
+p{
+color: black;
+}
+/* h1태그 글자색 brown */
+h1{
+	color: brown !important;
+}
+/* p 글자색 파란색 */
+p{
+	color: blue;
+}
+</style>
+</head>
+<body>
+<div id="container">
+<h1 style="color: green;">레드향</h1>
+<p style="color: red;">껍질에 붉은 빛이 돌아 <span class="s1">레드향</span>이라 불린다.</p>
+<p id="p1">레드향은 한라봉과 귤을 교배한 것으로 </p>
+<p class="p2">비타민 C와 비타민 B가 풍부해..</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>0907/ex14.html</title>
+<style type="text/css">
+/* 전체선택자  밖여백 0, 안여백 0 */
+*{
+	margin: 0px; padding: 0px;
+}
+/* body선택자 배경색 #ccc, 안여백 20px */
+body{
+	background-color: #ccc; padding: 20px;
+}
+/* id="signup"  배경색 흰색, 테두리선 1px 실선 #222, 테두리선 둥글게 5px, 안여백 20px, 너비 400px,
+밖여백 위아래 30px 왼오른쪽 자동으로 가운데 정렬 */
+#signup{
+	background-color: white; border: 1px solid #222; border-radius: 5px;
+	padding: 20px; width: 400px; margin: 30px auto;
+}
+/* id="signup" fieldset  테두리선 1px 실선 #ccc, 밖 아래여백 30px*/
+#signup  fieldset{
+	border: 1px solid #ccc;  margin-bottom: 30px;
+}
+/* id="signup" legend     글자크기 16px, 글자굵기 bold, 안 왼쪽여백 5px, 안 아래여백 10px  */
+#signup legend{
+	font-size: 16px; font-weight: bold; padding-left: 5px; padding-bottom: 10px;
+}
+/* id="signup" ul li   줄간격 30px, 목록스타일 점없앰, 안여백 위아래 5px 왼쪽오른쪽 10px, 
+밖 아래여백 2px */
+#signup ul li{
+	line-height: 30px; list-style-type: none; padding: 5px 10px; margin-bottom: 2px;
+}
+/* id="signup"  input[type="button"]    테두리선 1px 실선 #222, 테두리선 둥글게 20px, 
+글자크기 16px, 글자간격 1px,  밖여백 자동, 안여백 위아래 7px, 왼오른 25px , 배치 block*/
+#signup input[type="button"]{
+	border: 1px solid #222; border-radius: 20px; font-size: 16px; letter-spacing: 1px;
+	margin: auto; padding: 7px 25px; display: block;
+}
+/* id="signup" label  글자크기 13px, 너비 110px, 왼쪽으로 어울림*/
+#signup label{
+	font-size: 13px; width: 110px; float: left;
+}
+/* input[type=text]  password  tel email  테두리선 1px 실선 #ccc,  테두리선 둥글게 3px, 
+                                          글자크기 13px, 안여백 5px, 너비 200px*/
+/* 
+#signup input[type=text], #signup input[type=password], #signup input[type=tel], #signup input[type=email]{
+border: 1px solid #ccc; border-radius: 3px;
+font-size: 13px; padding: 5px; width: 200px;
+} */
+#signup input:not([type=button]){
+	border: 1px solid #ccc; border-radius: 3px;
+	font-size: 13px; padding: 5px; width: 200px;
+}                                         
+/* required  테두리선 빨간*/
+#signup input[required]{
+	border: 1px solid red;
+}
+/* readonly 테두리선 없음 */
+#signup input[readonly]{
+	border: none;
+}
+/* #signup  fieldset 마지막  테두리선 없음 */
+#signup  fieldset:last-of-type {
+	border: none;
+}
+/* 버튼 마우스 오버  배경색 #222, 글자색 흰색 */
+#signup input[type="button"]:hover {
+	background-color: #222; color: white;
+}
+</style>
+</head>
+<body>
+<form action="a.jsp" method="post" id="signup">
+<fieldset>
+<legend>로그인 정보</legend>
+<ul>
+	<li><label>아이디</label><input type="text" name="userid" id="userid" required autofocus></li>
+	<li><label>비밀번호</label><input type="password" name="pwd1" id="pwd1" required></li>
+	<li><label>비밀번호 확인</label><input type="password" name="pwd2" id="pwd2" required></li>
+	<li><label>회원 등급</label><input type="text" name="level" id="level" value="준회원" readonly></li>
+</ul>
+</fieldset>
+<fieldset>
+<legend>개인 정보</legend>
+<ul>
+	<li><label>이름</label><input type="text" name="fullname" id="fullname" required placeholder="5자미만 공백없이"></li>
+	<li><label>메일주소</label><input type="email" name="email" id="email" required placeholder="abcd@domain.com"></li>
+	<li><label>연락처</label><input type="tel" name="tel" id="tel" ></li>
+</ul>
+</fieldset>
+<fieldset>
+	<input type="button" value="제출">
+</fieldset>
+</form>
+</body>
+</html>

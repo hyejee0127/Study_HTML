@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>0928_jQuery/test1.html</title>
+<script type="text/javascript" src="../0914_jQuery/jquery-3.6.1.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		//반복문  대상.each()
+			$('h1').each(function(index,item){
+// 				alert(index);
+				$(this).append("-"+index);
+			});
+		
+		// 배열변수 반복문 접근
+		var arr=[
+			{"id":"kim","name":"kimgildong"},
+			{"id":"lee","name":"leegildong"},
+			{"id":"hong","name":"honggildong"}
+		];
+		
+		$.each(arr,function(index,item){
+// 			alert(item);
+// 			alert(item.id);
+// 			alert(item.name);
+			$('body').append(item.id +","+ item.name + "<br>");
+		});
+		
+		//id="btn" 버튼을 클릭했을때 
+		//배열에 반복해서 접근 데이터 가져와서 table태그 뒤부분에 추가
+		// "<tr><td>"+item.id+"</td><td>"+item.name+"</td></tr>"
+		$('#btn').click(function(){
+			$.each(arr,function(index,item){
+				$('table').append("<tr><td>"+item.id+"</td><td>"+item.name+"</td></tr>");
+			})
+		});
+	});
+</script>
+</head>
+<body>
+<input type="button" value="버튼" id="btn">
+<table border="1">
+<tr><td>아이디</td><td>이름</td></tr>
+</table>
+
+<h1>head-0</h1>
+<h1>head-1</h1>
+<h1>head-2</h1>
+</body>
+</html>
+

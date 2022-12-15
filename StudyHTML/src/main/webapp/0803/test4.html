@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>0803/test4.html</title>
+<style type="text/css">
+/* 글자색  영문, 
+RGB (Red Green Blue) 16진수(0~9,a,b,c,d,e,f) 0~ff #ff0000, 10진수 255,0,0*/
+h1{
+/* 	color: red; */
+/* 	color: #ff0000; */
+/* 	color: rgb(255,0,0); */
+/* 	투명도 */
+/* 	color: rgba(255,0,0,0.5); */
+	color: #0000ff;
+}
+/* h1태그 #0000ff */
+/* p태그 그린색 */
+p{
+	color: green;
+}
+/* class="s1" 255,0,0*/
+.s1{
+	color: rgb(255,0,0);
+}
+/* id="p1"  배경색 파란색  글자색 흰색*/
+#p1{
+	background-color: blue;
+	color: white;
+/* 	글자정렬 left right center */
+	text-align: center;
+/* 	글자 위아래 가운데 정렬 => 안여백, 줄간격(영역높이, 줄간격크기 동일)*/
+	height: 50px;
+	line-height: 50px;
+}
+/* class="p2" 배경색 빨간색  글자색 흰색 반투명 */
+.p2{
+	background-color: red;
+	color: rgba(255,255,255,0.5);
+}
+h1{
+/* 텍스트 줄표시 none  underline overline line-through*/
+/* 	text-decoration: none; */
+/* 글자 그림자 text-shadow: 가로그림자(왼쪽 오른쪽) 세로그림자(위 아래) 번짐정도 색*/
+	text-shadow: -1px -1px 3px black;
+}
+a{
+	text-decoration: none;
+	color: silver;
+}
+.t1{
+/* 	대소문자 변환  capitalize => Html */
+	text-transform: capitalize;
+}
+.t2{
+/* 	대문자 변환 upppercase */
+	text-transform: uppercase;
+}
+.t3{
+/* 	소문자 변환 lowercase */
+	text-transform: lowercase;
+}
+#p1{
+/* 	글자간격 */
+	letter-spacing: 0.5em;
+/* 	단어간격 */
+	word-spacing: 1em;
+}
+</style>
+</head>
+<body>
+<div id="container">
+<h1><a href="ex5.html">레드향</a></h1>
+<p>껍질에 붉은 빛이 돌아 <span class="s1">레드향</span>이라 불린다.</p>
+<p id="p1">레드향은 한라봉과 귤을 교배한 것으로 </p>
+<p class="p2">비타민 C와 비타민 B가 풍부해..</p>
+<p class="t1">html</p>
+<p class="t2">css</p>
+<p class="t3">JAVASCRIPT</p>
+</div>
+</body>
+</html>

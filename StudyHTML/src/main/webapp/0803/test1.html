@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>0803/test1.html</title>
+<style type="text/css">
+	/* 
+	선택자{
+		속성:값; 
+	} 
+	*/
+/* 	선택자 : * (전체), 태그, id=이름 #이름, class=이름  .이름, ... */
+*{
+	color: green;
+}
+p{
+	color: blue;
+}
+#p1{
+	color: purple;
+}
+.p2{
+	color: yellow;
+	background-color: green;
+}
+.s1{
+	color: red;
+	background-color: pink;
+}
+h1 {
+	background-color: yellow;
+}
+#container{
+/*  테두리선 */
+	border: 1px solid black;
+/* 	너비 */
+	width: 500px;
+/* 	안여백 */
+	padding: 10px;
+/* 	밖여백 auto 가운데정렬 */
+	margin: 20px auto;
+}
+</style>
+</head>
+<body>
+<div id="container">
+<h1>레드향</h1>
+<p>껍질에 붉은 빛이 돌아 <span class="s1">레드향</span>이라 불린다.</p>
+<p id="p1">레드향은 한라봉과 귤을 교배한 것으로 </p>
+<p class="p2">비타민 C와 비타민 B가 풍부해..</p>
+</div>
+
+</body>
+</html>

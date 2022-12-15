@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>0821/test4.html</title>
+<style type="text/css">
+/* 구조 가상 클래스 */
+/* :only-child  부모안에 자식요소가 하나뿐일때,
+A:only-type-of 부모안에 A요소가하나뿐일때,
+
+:first-child 부모안에 첫번째 자식,
+:last-child 부모안에 마지막번째 자식,
+A:first-of-type 부모안에 A요소 첫번째 요소,
+A:last-of-type 부모안에 A요소 마지막번째 요소,
+
+:nth-child(n) 부모안에 n번째 자식,
+:nth-last-child(n) 부모안에 끝에서 n번째 자식,
+A:nth-of-type(n) 부모안에 A요소 n번째 자식,
+A:nth-last-of-type(n) 부모안에 A요소 끝에서 n번째 자식,
+*/
+/* id="contents"안에 모든 자식 요소중에서 3번째 자식 스타일 적용 */
+#contents :nth-child(3) {
+	background-color: yellow;
+}
+/* id="contents"안에 p 자식 요소중에서 3번째 자식 스타일 적용 */
+#contents p:nth-of-type(3) {
+	background-color: green;
+}
+/* 홀수번째 :nth-child(odd) , :nth-child(2n+1)*/
+/* 짝수번째 :nth-child(even) , :nth-child(2n)*/
+/* 테이블 태그 tr 홀수번째 배경색 회색 변경 */
+table tr:nth-of-type(2n+1) {
+	background-color: gray;
+}
+/* 가상클래스 =>요소선택 */
+/* 가상요소=> 요소추가  ::first-line, ::first-letter, ::before, ::after  */
+li.new::after {
+	content: "NEW!!";
+	background-color: red;
+	color: white;
+	margin: 0px 10px;
+}
+</style>
+</head>
+<body>
+<h1>제품목록</h1>
+<ul>
+<li class="new">제품1</li>
+<li>제품2</li>
+<li>제품3</li>
+<li class="new">제품4</li>
+</ul>
+
+<h1>웹개발</h1>
+<table>
+<tr><td>HTML</td></tr>
+<tr><td>CSS</td></tr>
+<tr><td>JavaScript</td></tr>
+<tr><td>jQuery</td></tr>
+<tr><td>React</td></tr>
+</table>
+
+<div id="contents">
+	<h2>이용안내</h2>
+	<p>내용1</p>
+	<p>내용2</p>
+	<h2>이용안내2</h2>
+	<p>내용</p>
+	<h2>이용안내3</h2>
+	<p>내용</p>
+</div>
+</body>
+</html>

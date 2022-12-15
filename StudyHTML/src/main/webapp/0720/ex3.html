@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>0720/ex3.html</title>
+</head>
+<body>
+<h1>레드향 주문하기</h1>
+<form action="a.jsp" method="post">
+<fieldset>
+<legend>배송 정보</legend>
+<label>이름</label>
+<input type="text" name="name" size="50"><br>
+<label>배송 주소</label>
+<input type="text" name="address" size="50"><br>
+<label>이메일</label>
+<input type="email" name="email" size="50"><br>
+<label>연락처</label>
+<input type="tel" name="tel" size="50"><br>
+<label>배송 지정</label>
+<input type="date" name="date" size="50">(주문일로부터 최소 3일 이후)<br>
+<label>메모</label>
+<textarea name="memo" rows="5" cols="50"></textarea><br>
+</fieldset>
+<input type="submit" value="주문하기">
+<input type="reset" value="취소하기">
+</form>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>0914_jQuery/test3.html</title>
+<script type="text/javascript" src="jquery-3.6.1.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+// 		대상.css( 속성 )
+		var h =$('h1').css('color');
+// 		alert(h);
+		$('h1').css('color','red');
+		$('h1').css('background-color','pink');
+		
+		$('h1').css({
+			'color':'blue',
+			'background-color':'skyblue'
+		});
+		
+		//배열변수
+		var arr=['red','green','blue'];
+		$('h1').css('color',function(index){
+// 			alert(index);
+// 			if(index==0){
+// 				return 'red';
+// 			}else if(index==1){
+// 				return 'green';
+// 			}else{
+// 				return 'blue';
+// 			}
+// 			alert(arr[index]);
+			return arr[index];
+		});
+		
+	});
+</script>
+</head>
+<body>
+<h1>head-0</h1>
+<h1>head-1</h1>
+<h1>head-2</h1>
+</body>
+</html>
